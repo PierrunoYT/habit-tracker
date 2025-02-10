@@ -71,8 +71,10 @@ DATABASE_URL=sqlite:./data/habits.db
 
 Frontend (.env.local):
 ```env
-NEXT_PUBLIC_API_URL=http://localhost:3001
+NEXT_PUBLIC_API_URL=http://localhost:3001/api
 ```
+
+> **Important**: Make sure to include `/api` at the end of the `NEXT_PUBLIC_API_URL` in the frontend environment variable. This is required for the frontend to properly communicate with the backend API.
 
 ## 🚀 Running the Application
 
@@ -139,6 +141,14 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 5. Open a Pull Request
 
 ## 🐛 Troubleshooting
+
+### Common Issues
+
+#### API Connection Issues
+- Ensure the backend server is running on port 3001
+- Verify that `NEXT_PUBLIC_API_URL` in frontend's `.env.local` ends with `/api`
+- If you get JSON parsing errors, check that the API URL is correctly configured
+- Try restarting both frontend and backend servers after changing environment variables
 
 ### Windows
 - If you encounter EACCES errors, run PowerShell as Administrator
