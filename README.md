@@ -67,7 +67,6 @@ Backend (.env):
 ```env
 PORT=3001
 DATABASE_URL=sqlite:./data/habits.db
-JWT_SECRET=your_jwt_secret
 ```
 
 Frontend (.env.local):
